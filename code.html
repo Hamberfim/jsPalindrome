@@ -145,13 +145,15 @@
                     <p>Using HTML, Javascript, Bootstrap and custom CSS we can design an application to solve and
                         present the question... "Is it a palindrome?"</p>
                     <h5>getValue() function </h5>
-                    <p>Here we use javascript to set an inline alert message's css class to 'invisible' and to "Get" a
+                    <p>Here we use javascript to set an inline alert message's css class to 'invisible', it's default
+                        background color and to "Get" the
                         user input field value in the HTML file by using
                         <span class="fw-bold">document.getElementById</span>
-                        to locate the html tags with id's of 'alert' and 'userString'.</p>
+                        to locate the html tags with id's of 'alert' and 'userString'. We then clean the string of any
+                        characters or spaces that would interfere with our test.</p>
                     <br>
                     <h5>reverseString() function </h5>
-                    <p>Then we pass the 'userString' array to a logic function that uses a decrementing <span
+                    <p>Then we pass the clean 'newUserStr' array to a logic function that uses a decrementing <span
                             class="fw-bold">for loop</span> to move
                         backwards through the index of the string array where each index item is cancatenated and then
                         added to the
@@ -162,11 +164,9 @@
                     <br>
                     <h5>displayString() function </h5>
                     <p>From the Controller function we call the view function displayString() passing it the reversed
-                        array variable 'reverseStr'. Using <span class="fw-bold">getElementbyId</span> and it's <span
-                            class="fw-bold">innerHTML</span>
-                        property we locate the html tag with id of 'msg' and write the reversed string to the page using
-                        a template literal. Then we remove the inline 'alert' message's css 'invisible' class to display
-                        the reversed string in an inline alert success message.</p>
+                        array variable 'reverseStr', the cleaned 'newUserStr' and orginal user input 'userStr'. Then using <span class="fw-bold">getElementbyId</span> and it's <span
+                            class="fw-bold">classList</span> and <span class="fw-bold">innerHTML</span>
+                        properties we modify the inline alert box and it's CSS classes based on the success or failure of the if statement.</p>
                 </div>
             </div>
         </div>
